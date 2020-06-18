@@ -1,0 +1,100 @@
+.product {
+  margin-top: rem(40);
+
+  &__header {
+    width: 100%;
+    margin-bottom: rem(30);
+  }
+
+  &__title {
+    color: map-get($colors, "product-title");
+    margin-bottom: rem(30);
+    font-size: rem(29);
+  }
+
+  &__summary {
+    font-size: rem(17);
+  }
+
+  &__map {
+    margin-top: rem(30);
+  }
+
+  .button__cta {
+    width: rem(165);
+    height: rem(45);
+    line-height: rem(45);
+    font-size: rem(17);
+  }
+
+  .layout-main .button__cta {
+    margin-top: rem(40);
+  }
+}
+
+.price {
+  &__title {
+    color: map-get($colors, "price-title");
+    font-size: rem(25);
+  }
+
+  &__value {
+    color: map-get($colors, "product-title");
+
+    &--discount {
+      font-size: rem(30);
+      position: relative;
+      display: inline-block;
+
+      &:before {
+        content: "";
+        width: 115%;
+        height: rem(4);
+        background: map-get($colors, "red");
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%) rotate(-10deg);
+        position: absolute;
+        border-radius: rem(10);
+      }
+    }
+
+    &--regular {
+      font-size: rem(40);
+      text-align: right;
+    }
+
+    &--full {
+      font-size: rem(40);
+      text-align: center;
+    }
+  }
+}
+
+.aside {
+  &__title {
+    color: map-get($colors, "product-title");
+    font-size: rem(25);
+    text-transform: capitalize;
+    margin-bottom: rem(40);
+  }
+
+  .list {
+    margin-top: rem(40);
+  }
+}
+
+.extra {
+  &__title {
+    color: map-get($colors, "product-title");
+    font-size: rem(25);
+    margin: rem(30) 0 rem(20) 0;
+  }
+}
+
+.page {
+  iframe {
+    width: 100%;
+    margin-top: rem(16);
+  }
+}

@@ -1,0 +1,124 @@
+.footer {
+  background: map-get($colors, "footer");
+  color: map-get($colors, "white");
+  padding: rem(40) 0 rem(25) 0;
+  font-size: rem(14);
+  margin-top: rem(40);
+
+  &__top {
+    display: flex;
+    height: rem(75);
+    justify-content: space-between;
+  }
+
+  &__afip {
+    flex-basis: rem(55);
+    height: rem(75);
+    background: url("../../images/data-fiscal.png");
+  }
+
+  &__links {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    display: flex;
+
+    .footer__link {
+      text-decoration: underline;
+      color: map-get($colors, "white");
+      font-size: rem(15.5);
+      line-height: rem(23);
+    }
+  }
+
+  &__li {
+    flex-basis: 50%;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    height: rem(47);
+    margin-top: rem(40);
+  }
+
+  &__sociali {
+    width: rem(47);
+    height: rem(47);
+    margin: 0 rem(20);
+    background: map-get($colors, "white");
+    border-radius: rem(100);
+
+    &:last-child {
+      background: map-get($colors, "footer");
+    }
+  }
+
+  &__contactus {
+    text-align: center;
+    margin-top: rem(15);
+    line-height: rem(16);
+  }
+
+  [class *= ico-] {
+    display: block;
+    width: 50%;
+    height: 50%;
+
+    path {
+      fill: map-get($colors, "footer");
+    }
+  }
+
+  .ico-skype {
+    width: 100%;
+    height: 100%;
+
+    path {
+      fill: map-get($colors, "white");
+    }
+  }
+}
+
+@media (max-width: em(1149)) {
+  .footer {
+    &__top {
+      flex-wrap: wrap;
+      height: auto;
+    }
+
+    &__links {
+      flex-basis: 100%;
+      margin-bottom: 1em;
+      padding-right: rem(15);
+    }
+  }
+}
+
+@media (max-width: em(470)) {
+  .footer {
+    &__links {
+      padding: 0;
+    }
+
+    &__li,
+    &__column,
+    &__afip {
+      flex-basis: 100%;
+    }
+
+    &__column,
+    &__afip {
+      margin: 1em 0 0;
+    }
+
+    &__afip {
+      flex-basis: auto;
+
+      .fullblock {
+        width: rem(55);
+        height: rem(75);
+      }
+    }
+  }
+}

@@ -1,0 +1,261 @@
+// Fonts
+
+@font-face {
+  font-family: Roboto-regular;
+  src: url("../../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Variables
+@import "./variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+@import "modules/alerts.scss";
+
+.p-5 {
+  padding-top: 0 !important;
+}
+
+.d-flex {
+  > nav {
+    margin-left: auto !important;
+  }
+}
+
+/* stylelint-disable selector-no-qualifying-type */
+textarea.form-control {
+  height: (85rem/$fs);
+}
+
+.input-group-text {
+  svg {
+    height: (20em/$fs);
+  }
+}
+
+.column-action {
+  width: (250em/$fs);
+
+  button {
+    width: 100%;
+  }
+}
+
+.column-active {
+  width: (70em/$fs);
+  text-align: center;
+}
+
+.table {
+  th,
+  td {
+    vertical-align: middle;
+  }
+
+  th {
+    position: sticky;
+    top: (59rem/$fs);
+    z-index: 1;
+  }
+
+  svg {
+    width: 50%;
+  }
+}
+
+.sticky-head {
+  position: sticky;
+  top: (60rem/$fs);
+  background: #f8fafc;
+  box-shadow: 0 0 (10rem/$fs) (3rem/$fs) rgba(#f8fafc, 1);
+  border-radius: 0 0 (10rem/$fs) (10rem/$fs);
+  z-index: 900;
+  margin: 0 0 (10rem/$fs) 0;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+input[type = number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+[class *= aspect-] {
+  margin: 0;
+  width: 100%;
+  height: 0;
+  position: relative;
+  display: block;
+  background: #e2e2e2;
+  overflow: hidden;
+  z-index: 0;
+
+  img,
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+.aspect-16-9 {
+  padding-bottom: 56.25%;
+}
+
+.aspect-1-1 {
+  padding-bottom: 100%;
+}
+
+ul,
+li {
+  padding: 0;
+  list-style: none;
+}
+
+.image-row {
+  display: flex;
+  height: (120rem/$fs);
+  align-items: center;
+
+  .col-image {
+    flex-basis: (120rem/$fs);
+    min-width: (120rem/$fs);
+    max-width: (120rem/$fs);
+  }
+
+  .col {
+    flex-grow: 1;
+  }
+
+  .col-action {
+    flex-basis: (150rem/$fs);
+    min-width: (150rem/$fs);
+    max-width: (150rem/$fs);
+  }
+}
+
+.tag-list {
+  min-height: (37rem/$fs);
+  padding-bottom: 0;
+  height: auto;
+
+  .tag-list-item {
+    display: inline-block;
+    padding: 0 (20rem/$fs) 0 (5rem/$fs);
+    background: $blue;
+    border-radius: (5rem/$fs);
+    position: relative;
+    margin: 0 (12rem/$fs) (6rem/$fs) 0;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:before {
+      top: 50%;
+      transform: translateY(-50%);
+      content: "x";
+      font-size: (10rem/$fs);
+      height: (16em/10);
+      width: (16em/10);
+      text-align: center;
+      line-height: (16em/10);
+      border-radius: 10em;
+      background: $indigo;
+      right: (2em/10);
+      position: absolute;
+    }
+  }
+}
+
+select {
+  option {
+    cursor: pointer;
+  }
+
+  .disabled {
+    color: graytext;
+    cursor: default;
+  }
+}
+
+.inquiry {
+  &__product {
+    text-align: center;
+    width: (80em/$fs);
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    svg {
+      height: (40rem/$fs);
+    }
+  }
+
+  &__flag {
+    text-align: center;
+    width: (80em/$fs);
+
+    svg {
+      height: (40rem/$fs);
+    }
+  }
+
+  &__date {
+    width: (100em/$fs);
+    text-align: right;
+  }
+
+  /* stylelint-disable value-no-vendor-prefix, property-no-vendor-prefix */
+  .clamp-one {
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+
+  .clamp-two {
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.form-control {
+  svg {
+    height: (20rem/$fs);
+    margin-right: (10em/$fs);
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+// Draft
+@import "./modules/draft/draft.scss";
+@import "./modules/draft/rich-editor.scss";
+
+// Dropzone
+@import "./modules/dropzone/basic.scss";
+@import "./modules/dropzone/dropzone.scss";
