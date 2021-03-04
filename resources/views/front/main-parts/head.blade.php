@@ -1,5 +1,5 @@
 <?php
-  use App\Http\Helpers\Helpers;
+  
 ?>
 
 <meta charset="utf-8" />

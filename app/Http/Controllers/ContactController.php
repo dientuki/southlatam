@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\ContactForm;
 use Illuminate\Http\Request;
-use App\Http\Helpers\Helpers;
+use Helpers;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 

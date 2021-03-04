@@ -1,5 +1,5 @@
 <?php
-use App\Http\Helpers\Helpers;
+
 use Illuminate\Support\Str;
 ?>
 @extends('layouts.front')

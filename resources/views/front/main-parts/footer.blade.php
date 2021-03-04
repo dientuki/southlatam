@@ -1,5 +1,5 @@
 <?php 
-  use App\Http\Helpers\Helpers;
+  
 ?>
 <footer class="footer">
   <div class="wrapper">

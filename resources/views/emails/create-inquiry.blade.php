@@ -1,4 +1,4 @@
-<?php use App\Http\Helpers\Helpers; ?>
+<?php  ?>
 <div>
   Nombre: {{ $valid['name'] }} <br />
   Email: {{ $valid['email'] }} <br />

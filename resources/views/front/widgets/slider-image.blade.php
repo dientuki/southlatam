@@ -1,4 +1,4 @@
-<?php use App\Http\Helpers\Helpers; ?>
+<?php  ?>
 
 <figure class="aspect-homeslider">
   <img data-src="{{ $image->getFullUrl('slider_desktop') }}" class="{{ $lazyload }}"/>
